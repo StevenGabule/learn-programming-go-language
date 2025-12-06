@@ -1,0 +1,73 @@
+{
+	// Go Extension Settings - Professional Configuration
+	// Save this to: ~/.config/Code/User/settings.json (merge with existing)
+	// Or for workspace: .vscode/settings.json
+	// Editor Settings for Go
+	"[go]": {
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit"
+		},
+		"editor.snippetSuggestions": "inline",
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		"editor.tabSize": 4,
+		"editor.insertSpaces": false,
+		"editor.defaultFormatter": "golang.go"
+	},
+	// Go Extension Configuration
+	"go.useLanguageServer": true,
+	"go.languageServerFlags": [
+		"-rpc.trace"
+	],
+	// Linting
+	"go.lintTool": "golangci-lint",
+	"go.lintFlags": [
+		"--fast"
+	],
+	"go.lintOnSave": "package",
+	// Testing
+	"go.testOnSave": false,
+	"go.coverOnSave": false,
+	"go.testFlags": [
+		"-v",
+		"-race"
+	],
+	"go.coverageDecorator": {
+		"type": "highlight",
+		"coveredHighlightColor": "rgba(64,128,128,0.5)",
+		"uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+		"coveredGutterStyle": "blockgreen",
+		"uncoveredGutterStyle": "blockred"
+	},
+	// Build
+	"go.buildOnSave": "off",
+	"go.buildFlags": [],
+	"go.buildTags": "",
+	// Formatting
+	"go.formatTool": "goimports",
+	// gopls (Language Server) Settings
+	"gopls": {
+		"ui.semanticTokens": true,
+		"ui.completion.usePlaceholders": true,
+		"ui.diagnostic.staticcheck": true,
+		"formatting.gofumpt": true
+	},
+	// Autocomplete
+	"go.autocompleteUnimportedPackages": true,
+	"go.docsTool": "godoc",
+	// Delve Debugger Settings
+	"go.delveConfig": {
+		"dlvLoadConfig": {
+			"followPointers": true,
+			"maxVariableRecurse": 1,
+			"maxStringLen": 200,
+			"maxArrayValues": 64,
+			"maxStructFields": -1
+		},
+		"apiVersion": 2,
+		"showGlobalVariables": true
+	},
+	"cSpell.words": [
+		"nums"
+	]
+}
